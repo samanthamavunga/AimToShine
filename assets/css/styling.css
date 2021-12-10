@@ -1,0 +1,243 @@
+
+/************************
+DASHBOARD
+***********************/
+
+header.dashboard{
+    position:fixed;
+    margin-bottom:20px;
+  }
+  
+  div.dashboard{
+    width:100%;
+    height: 100%;
+    margin:0;
+    background-color:white;
+    padding:2px;
+    margin-top:5px;
+    margin-bottom:40px;
+    border-radius:20px;
+  }
+  
+  div.sidebar{
+    width: 20%;
+    position: fixed; 
+    z-index: 1;
+    margin:0;
+    border-radius: 10px;
+    margin-left:0;
+    position:fixed;
+    height:90%;
+    float:left;
+    padding:80px 20px;
+    background-color:#333;
+  }
+  
+  div.display-dashboard{
+    width:79%;
+    margin-left:1%;
+    height:100%;
+    float:right;
+    background-color:white;
+    border-radius: 20px;
+    background-color:rgb(233, 233, 233);
+  }
+  
+  div.sidebar span{
+    display:block;
+    margin:auto;
+    width:100%;
+    height:60px;
+    margin-bottom:25px;
+  }
+  
+  div.sidebar img{
+    width:50px;
+    height:50px;
+    margin-left: 20px;
+    margin-right:20px;
+    padding:5px;
+    padding-top:10px;
+    float:left;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  div.sidebar a{
+    display:block;
+    width:60%;
+    height:40px;
+    padding:5px;
+    padding-top:8px;
+    cursor:pointer;
+    text-align: center;
+    background-color: #E0E0E0;
+    text-decoration: none;
+    color:black;
+    font-size: 17px;
+    font-weight:500;
+    margin-top:10px;
+    float:left;
+    border-radius: 4px;
+  }
+  
+  div.sidebar a:hover{
+    background-color: #707070;
+  }
+  
+  div.display-dashboard h1{
+    padding:100px;
+    width:100%;
+    height:100px;
+    margin:100px 120x;
+  }
+  
+  
+  /**********************
+  FOOTER
+  ***********************/
+  footer{
+    width: 500px;
+    margin:auto;
+    margin-top:100px;
+    height:150px;
+    text-align: center;
+    border-width: 500px;
+    padding-top:20px;
+    border-top:1px solid #f1f1f1;
+    }
+  
+  img.footer-image{
+    width:20px;
+    height:20px;
+    display:inline;
+    margin-right:2px;
+  }
+  
+  footer p{
+    font-weight:600;
+  }
+  
+  /************************
+  PROFILE
+  ***********************/
+  
+  div.pdiv1{
+    width:60%;
+    height:250px;
+    margin-bottom:0;
+    border-radius: 20px;
+    padding:40px;
+    font-weight: 600;
+    background-color:#E0E0E0;
+    text-align: left;
+    font-size: 15px;
+  }
+  
+  .h3-profile{
+    padding: 80px 100px;
+    width:100%;
+    height:50px;
+    margin:0px 200px;
+  }
+  
+  /************************
+  COURT
+  ***********************/
+  div.cdiv1{
+    width:90%;
+    margin:auto;
+    margin-top:50px;
+    font-weight: 600;
+    background-color:#E0E0E0;
+    text-align: left;
+    font-size: 15px;
+    padding:20px;
+    border-radius: 20px;
+  } 
+  
+  .cdiv1 h3{
+    margin-left:60px;
+    margin-bottom:40px;
+    
+  }
+  
+  .cdiv1 table {
+    width:90%;
+    margin:auto;
+    margin-bottom:40px;
+  }
+  
+  .cdiv1 table td{
+    text-align: left;
+  }
+  
+  input[type=submit].editbutton, 
+  input[type=submit].modifybutton,
+  a.editbutton{
+    width:100px;
+    height:30px;
+    text-align: center;
+    padding:2px;
+    text-align: center;
+    margin-top:-15px;
+  }
+  
+  
+  a.editbutton{
+    background-color:#333;
+    color:white;
+  }
+  
+  input[type=submit].modifybutton{
+    margin-top:0;
+  }
+  
+  input[type=submit].editbutton:hover, 
+  input[type=submit].modifybutton:hover,
+  a.editbutton:hover{
+    font-weight:600;
+  }
+  
+  input[type=submit].addbutton{
+    width:100px;
+    height:30px;
+    text-align: center;
+    padding:2px;
+    text-align: center;
+    margin-left:60px;
+    margin-bottom: 20px;
+  }
+  
+  input[type=submit].addbutton:hover{
+    font-weight:600;
+  }
+  
+  tr.modify input{
+    padding:8px;
+  }
+  
+  input[type=text]:focus{
+    background-color: white;
+    color:#333;
+  }
+  
+  .table thead{
+    color:#04AA6D;
+    border-bottom:1px solid #333;
+  }
+  
+  div.special-bottom-margin{
+    margin-bottom:50px;
+  }
+  
+  /************************
+  COURT CASES
+  ***********************/
+  tr.modify input[type=number]{
+    width:100%;
+  }
+
+  h3.coloring{
+    color:red;
+  }
