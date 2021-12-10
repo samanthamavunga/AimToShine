@@ -47,11 +47,11 @@
     <section>
       <div class="dashboard">
         <div class="sidebar">
-            <span><img src="images/judge.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-            <span><img src="images/court.png" alt="court-icon"/><a href="mentorship.php">Mentorship Program</a> </span>
-            <span><img src="images/lawyer.png" alt="lawyer-icon"/><a href="donation.php">View Donations</a> </span>
-            <span><img src="images/head.png" alt="culprit-icon"/><a href="assets.php">View Assets</a> </span>
-            <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
+          <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
         </div>
         <div class="display-dashboard">
           <form action="" method=post>
@@ -74,9 +74,8 @@
                 </div>
               </div>
             </div>
-            <div id ="err"><h3 id="error">---</h3>
-            </div>
-            <h3 class="h3-profile coloring">Edit Profile</h3>
+            
+            <h3 class="h3-profile">Edit Profile</h3>
             <div class="container-fluid pdiv1 special-bottom-margin" style="height:400px;">
               <label style="margin-right:10px;">Firstname</label><input type="text" placeholder="Enter fname" value="<?php echo $fname?>" name="fname"><br>
               <label style="margin-right:10px;">Lastname</label><input type="text" placeholder="Enter lname" value="<?php echo $lname ?>" name="lname"><br>
@@ -143,7 +142,7 @@
       </form>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>
+        <p><img src="../assets/img/logo.jpeg" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
     </footer>
       
     <!-- Optional JavaScript -->

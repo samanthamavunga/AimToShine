@@ -17,6 +17,17 @@ class unit_testing extends TestCase
 
     }
 
+
+
+    public function testMentorCanAdd()
+    { //register new user
+        
+      
+      $this->assertTrue(TRUE);
+
+
+    }
+
     // public function testPostUpdate(){
         
     //     $response = updatePost("5", "updated title", "updated body");

@@ -141,9 +141,6 @@ header.dashboard{
     margin:0px 200px;
   }
   
-  /************************
-  COURT
-  ***********************/
   div.cdiv1{
     width:90%;
     margin:auto;
@@ -231,13 +228,7 @@ header.dashboard{
     margin-bottom:50px;
   }
   
-  /************************
-  COURT CASES
-  ***********************/
+
   tr.modify input[type=number]{
     width:100%;
-  }
-
-  h3.coloring{
-    color:red;
   }

@@ -38,11 +38,11 @@
     <section>
       <div class="dashboard">
             <div class="sidebar">
-                <span><img src="assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-                <span><img src="images/court.png" alt="court-icon"/><a href="mentorship.php">Mentorship Program</a> </span>
-                <span><img src="images/lawyer.png" alt="lawyer-icon"/><a href="donation.php">View Donations</a> </span>
-                <span><img src="images/head.png" alt="culprit-icon"/><a href="assets.php">View Assets</a> </span>
-                <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
+            <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
             </div>
             <div class="display-dashboard">
               <h1>Welcome <?php echo 'Dear'.' '.$fname.' '.$lname?></h1>
@@ -50,7 +50,7 @@
         </div>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
+        
     </footer>
       
     <!-- Optional JavaScript -->

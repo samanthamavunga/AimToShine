@@ -33,11 +33,11 @@
     <section>
     <div class="dashboard">
         <div class="sidebar">
-            <span><img src="images/judge.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-            <span><img src="images/court.png" alt="court-icon"/><a href="mentorship.php">Mentorship Program</a> </span>
-            <span><img src="images/lawyer.png" alt="lawyer-icon"/><a href="donation.php">View Donations</a> </span>
-            <span><img src="images/head.png" alt="culprit-icon"/><a href="assets.php">View Assets</a> </span>
-            <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
+          <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
         </div>
         <div class="display-dashboard">
           <form action="donation.php" method="post">
@@ -201,6 +201,7 @@
                           //query 03 - add
                           $sql3 = "INSERT INTO `donor`(`donor_id`, `donor_name`, `donor_email`, `donor_adress`, `donor_province`, `date_donated`, `donation_name`) 
                           VALUES ('$donorid','$donorname','$donoremail','$donoraddress','$donorprovince','$datedonated','$donationname')";
+                          echo $sql3;
 
                           if (mysqli_query($conn, $sql3)) {
                             echo "<p style='color:green;'>New record created successfully</p>";
@@ -242,7 +243,7 @@
       </div>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>
+        <p><img src="../assets/img/logo.jpeg" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
     </footer>
       
     <!-- Optional JavaScript -->
