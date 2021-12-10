@@ -1,17 +1,17 @@
-<?php require("../Database_Connections/db_cred.php");
+<?php require("./../controllers/user_controller.php");
   session_start();
 
   $personid=$_SESSION['person_id'];
 
-  // Create connection
-  $conn = new mysqli(servername, username, password, dbname);
+//   // Create connection
+   $conn = new mysqli(servername, username, password, dbname);
 
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+//   // Check connection
+   if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+ }
 
-$sql1 = "SELECT * FROM `donor`";
+ $sql1 = "SELECT * FROM `donor`";
    
 ?>
 
@@ -40,7 +40,7 @@ $sql1 = "SELECT * FROM `donor`";
             <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
         </div>
         <div class="display-dashboard">
-          <form action="mentorship.php" method="post">
+          <form action="donation.php" method="post">
             <div class="container-fluid cdiv1" >
               <h3>Donations</h3>
               <input type="submit" class="btn btn-outline-secondary addbutton" name="add" value="Add">
@@ -96,13 +96,13 @@ $sql1 = "SELECT * FROM `donor`";
                 <thead>
                   <tr>
                     <th scope="col">DonorID</th>
-                    <th scope="col" >DonorName<th>
-                    <th scope="col" style="position:relative; right:90px;">DonorEmail</th>
-                    <th scope="col">DonorAddress</th>
-                    <th scope="col">DonorProvince</th>
-                    <th scope="col">DateDonated</th>
-                    <th scope="col">DonationName</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">DonorName<th>
+                    <th scope="col" style="position:relative; left:-300px;">DonorEmail</th>
+                    <th scope="col" style="position:relative; left:-400px;">DonorAddress</th>
+                    <th scope="col"style="position:relative; left: -450px;">DonorProvince</th>
+                    <th scope="col" style="position:relative; left:-490px;">DateDonated</th>
+                    <th scope="col" style="position:relative; left:-550px;">DonationName</th>
+                    <th scope="col" style="position:relative; left:-530px;">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -111,29 +111,52 @@ $sql1 = "SELECT * FROM `donor`";
 
                     //checking if edit button has been clicked.
                     if(isset($_GET['editID'])){
+                      echo "successful";
+
                       $id=$_GET['editID'];
 
                       $sql = "SELECT * FROM `donor`";
                       
-                      $results= $conn->query($sql);
-                      $rows = $results->fetch_assoc();
+                     // $results= db_query($sql);
+                     // $rows = $results->db_fetch();
 
-                      if($results->num_rows==1){
-                        $donorid = $rows['donor_id'];
-                        $donorname =$rows['donor_name'];
-                        $donoremail = $rows['donor_email'];
-                        $donoraddress = $rows['donor_adress'];
-                        $donorprovince = $rows['donor_province'];
-                        $datedonated = $rows['date_donated'];
-                        $donationname = $rows['donation_name'];
-                      }
+                      $rows = getDonors();
+
+
+                      foreach($rows as $row){
+                        if ($row['donor_id'] == $_GET['editID']){
+                        echo "unsuccessful";
+
+                        $donorid = $row['donor_id'];
+                        $donorname =$row['donor_name'];
+                        $donoremail = $row['donor_email'];
+                        $donoraddress = $row['donor_adress'];
+                        $donorprovince = $row['donor_province'];
+                        $datedonated = $row['date_donated'];
+                        $donationname = $row['donation_name'];
+                     }}
+
+                      // else{
+                      //   echo "failed";
+
+                      // }
+
+
+
                     }
+
+                    else{
+
+                    echo "passed";
+                    }
+
                   ?>
                   <!-- record to be modified -->
-                  <tr class="modify">
+                  <tr class="modify" style="position:relative; left: -125px; padding:10px" >
+
                     <td style="visibility:hidden"><input type="number" placeholder="Enter donor-id" value="<?php echo $donorid ?>" name="donorid"></td>
                     <td><input type="text" placeholder="Enter donor name" value="<?php echo $donorname ?>" name="donorname"></td>
-                    <td><input type="text" placeholder="Enter donor email" value="<?php echo $donoremail ?>" name="donoremail"></td>
+                    <td><input type="text" style="padding:1px 0px -10px -10px" placeholder="Enter donor email" value="<?php echo $donoremail?>" name="donoremail"></td>
                     <td><input type="text" placeholder="Enter donor address" value="<?php echo $donoraddress ?>" name="donoraddress"></td>
                     <td><input type="text" placeholder="Enter donor province" value="<?php echo $donorprovince ?>" name="donorprovince"></td>
                     <td><input type="date" placeholder="Enter date donated" value="<?php echo $datedonated ?>" name="datedonated"></td>
@@ -203,7 +226,7 @@ $sql1 = "SELECT * FROM `donor`";
                           WHERE donor_id='$donorid'"; 
 
                           if ($conn->query($sql2) === TRUE) {
-                            echo "<p style='color:green'>Record updated successfully</p>";
+                            echo "<p style='color:blue'>Record updated successfully</p>";
                           } else {
                             echo "Error updating record: " . $conn->error;
                           }

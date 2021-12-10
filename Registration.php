@@ -95,6 +95,37 @@ session_start();
                 child to have an additional support system on one-to-ne or group basis and mentor to help bring out the light from mentees
       </p>
 
+      <script>
+        function validate(){
+            var fname=document.getElementById("fname");
+            var lname=document.getElementById("lname");
+            var password=document.getElementById("password");
+    
+            if (fname.value.trim()=="")
+            {
+                alert("Blank firstname");
+                return false;
+            }
+            else if(lname.value.trim()=="")
+            {
+                alert("Blank lastname");
+                return false;
+            }
+
+            else if(password.value.trim().length<5)
+            {
+                alert("Password too short")
+                return false;
+            }
+
+            else{
+                return true
+            }
+
+        
+            }        
+      </script>
+      
       <!--This is for the inside page that contain the form--->
       <section class="inner-page">
         <div class="container1">
@@ -102,7 +133,7 @@ session_start();
 
             <!-- Registration form with javasript validation before php validation
             -->
-            <form id="form" class="form" method="POST" enctype="multipart/form-data" action="./functions/register_user_function.php" onsubmit="return validateForm(event);">
+            <form id="form" class="form" method="POST" enctype="multipart/form-data" action="./functions/register_user_function.php" onsubmit="return (validate());">
               <h2>Register With Us</h2> 
               <?php
                 if(isset($_SESSION["errors"])){
@@ -187,7 +218,7 @@ session_start();
 
               <div class="form-control">
                 <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter password" id="password" name="password" required>
+                <input type="password" placeholder="Enter password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                 <small id='passwordError'></small>
               </div>
 
@@ -267,17 +298,18 @@ session_start();
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS Files 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- JS File -->
+  <!--
   <script src="AimToShine_Web/assets/js/main.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>-->
 
 </body>
 

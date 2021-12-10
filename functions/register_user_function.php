@@ -72,7 +72,7 @@ if(isset($_POST["register"]))
 
 
     //for phonenumber check
-    if(empty( $pnum ))
+    if(empty( $pnum))
     {
         array_push($errors, "Phone number is requried");
     }
@@ -97,11 +97,11 @@ if(isset($_POST["register"]))
       array_push($errors, "password confirmaton is requried");
     }
 
-    // check if email already exists
-    //$verify_email = verify_email_fxn($email);
-    //if(!$verify_email){
-       // array_push($errors, "email already exists");
-    //}
+    //check if email already exists
+    $verify_email = verify_email_fxn($email);
+        if(!$verify_email){
+        array_push($errors, "email already exists");
+    }
 
 
     // check if username already exists
@@ -111,18 +111,18 @@ if(isset($_POST["register"]))
     }
 
     // check if fields are of appropriate length
-    if(strlen($username) > 100){
-        array_push($errors, "username must be shorter than 100 characters");
+    if(strlen($username) > 10){
+        array_push($errors, "username must be shorter than 10 characters");
     }
 
-    if(strlen($email) > 100)
+    if(strlen($email) > 50)
     {
-        array_push($errors, "email must be shorter than 100 characters");
+        array_push($errors, "email must be greater that 50");
     }
 
 
-    if(strlen($psw) > 15){
-        array_push($errors, "password must be shorter than 100 characters");
+    if(strlen($psw) < 5){
+        array_push($errors, "password must contain more than 5 characters for security reasons");
     }
 
     // check if passwords are the same
@@ -131,12 +131,12 @@ if(isset($_POST["register"]))
     }
 
 
-    //validate username with regex
-    //$regex1 = '([A-Z])\w+';
-    // set an error if not a valid username address
-    //if(!preg_match($regex1, $username)){
-      // array_push($errors, "Your username is not valid. Only characters A-Z are  acceptable.");
-   // }
+    //forvalidate username with regex [a-zA-Z0-9._]
+     $regex1 = "[a-zA-Z0-9._]";
+    //set an error if not a valid username address
+    if(preg_match($regex1, $username)){
+      array_push($errors, "Your username is not valid. Only characters A-Z are  acceptable.");
+    }
 
 
     // validate email with regex
@@ -144,6 +144,11 @@ if(isset($_POST["register"]))
     // set an error if not a valid email address
     if(!preg_match($regex2, $email)){
         array_push($errors, "enter a valid email address");
+    }
+
+    $regex="/^[0-9]+$/"; // check if only numbers are inserted 
+    if(!preg_match($regex, $pnum)){
+        array_push($errors, "enter a valid phonenumber, only numbers are allowed");
     }
 
      

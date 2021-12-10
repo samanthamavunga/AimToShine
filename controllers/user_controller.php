@@ -22,6 +22,22 @@ function register_new_user($fname, $lname, $user_type, $username, $gender, $dob,
     }
 }
 
+function getDonors(){
+    $user = new User;
+
+    $run_query = $user->getDonors();
+
+    if($run_query){
+        $donors = array();
+        while($record = $user->db_fetch()){
+             $donors[] = $record;
+            }
+            return $donors;
+    }
+    else return [];
+
+}
+
 function verify_username($username)
 {
     // create a new instance of user object

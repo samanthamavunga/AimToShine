@@ -74,6 +74,8 @@
                 </div>
               </div>
             </div>
+            <div id ="err"><h3 id="error">---</h3>
+            </div>
             <h3 class="h3-profile coloring">Edit Profile</h3>
             <div class="container-fluid pdiv1 special-bottom-margin" style="height:400px;">
               <label style="margin-right:10px;">Firstname</label><input type="text" placeholder="Enter fname" value="<?php echo $fname?>" name="fname"><br>
@@ -87,7 +89,7 @@
               <label style="margin-right:10px;">New Password</label><input type="text" placeholder="Enter new password" value="<?php echo ""?>" name="newpass"><br>
               <input type="submit" name="edit" value="Edit" style="
                 width:100%;
-                background-color:#125c1d;
+                background-color:white;
                 border:none;
                 margin-top:10px;
                 border-radius:5px;
@@ -110,22 +112,32 @@
             $pnum=$_POST['pnum'];
             $pass=$_POST['oldpass'];
             $pass2=$_POST['newpass'];
+            $passency=md5($pass2);
             
             echo 'collected';
 
             $sql = "UPDATE `person` 
-            SET `firstname`='$fname',`lastname`='$lname',`username`='$uname',`DateofBirth`='$dob',`location`='$location',`phonenumber`='$pnum',`email`='$email',`password`='$pass2' 
+            SET `firstname`='$fname',`lastname`='$lname',`username`='$uname',`DateofBirth`='$dob',`location`='$location',`phonenumber`='$pnum',`email`='$email',`password`='$passency' 
             WHERE person_id=$personid";
            
 
-            if($pass!=$pass2)
+            if($pass!=$passency)
             {
               if ($conn->query($sql) === TRUE) {
+                ?>
+                <script>
+                  document.getElementById("error").textContent=<?php  echo "Record updated successfully"?>;
+
+                </script>
+                <?php
                 echo "Record updated successfully";
               } else {
                 echo "Error updating record: " . $conn->error;
               }
             } 
+          else{
+            echo "Do not repeat the same password";
+          }
           }
         ?>
       </form>

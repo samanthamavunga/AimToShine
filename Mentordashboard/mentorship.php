@@ -177,12 +177,13 @@ $sql1 = "SELECT * FROM `mentorship_content`";
                           $mentee=$_POST['menteeid'];
                           $dtoc=$_POST['datetocomplete'];
                           $mentorshiptype=$_POST['mentorshiptype'];
+                          $membershipID = $_POST['membershipID'];
 
                           
                           //query 02 - update
                           $sql2 = "UPDATE `mentorship_content` 
-                          SET `mentor_id`='$mentor',`mentee_id`='$mentee',`date_completion`='$dtoc',`mentorship_type`='$mentorshiptype',`membershipID`='$mem' 
-                          WHERE membershipID='$mem'"; 
+                          SET `mentor_id`='$mentor',`mentee_id`='$mentee',`date_completion`='$dtoc',`mentorship_type`='$mentorshiptype',`membershipID`='$membershipID ' 
+                          WHERE membershipID='$membershipID'"; 
 
                           if ($conn->query($sql2) === TRUE) {
                             echo "<p style='color:green'>Record updated successfully</p>";

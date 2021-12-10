@@ -34,6 +34,11 @@ class User extends db_connection
   }
 
 
+  public function getDonors(){
+    $sql = "SELECT * FROM `donor`";
+    return $this->db_query($sql);
+  }
+
 
  //get sername of my user
   public function getUserWithUsername($username)
