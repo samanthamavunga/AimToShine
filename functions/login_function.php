@@ -29,7 +29,7 @@ if (isset($_GET["submit"]))
         array_push($errors, "username does not exist in our database");
     }
 
-    // get the usernam with the email provided
+    // get the username with the email provided
     $getuser = getUserWithUsername($username);
     echo $getuser['username']."<br>";
     echo $username."<br>";
@@ -74,11 +74,11 @@ if (isset($_GET["submit"]))
       echo "successful";
          header("location: ./../src.php");
      } else {
-      echo "unsuccessful";
+    
     //     // store errors inside session
          $_SESSION["errors"] = $errors;
     //     echo "unsuccessful";
-       //  header("location: ./../loginselector.php");
+        header("location: ./../loginselector.php");
      }
 }
 

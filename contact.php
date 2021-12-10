@@ -60,6 +60,7 @@
           </ul>
         </nav><!-- .navbar -->
         <a href="Registration.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Register</a>
+        <a href="loginselector.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
       </div>
     </header><!-- End Header -->
   </div>

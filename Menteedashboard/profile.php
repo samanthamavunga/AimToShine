@@ -100,7 +100,7 @@
       </form>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>
+        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
     </footer>
       
     <!-- Optional JavaScript -->

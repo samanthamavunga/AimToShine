@@ -115,8 +115,13 @@ $sql1 = "SELECT * FROM `assets`";
                         $donorid = $rows['donor_id'];
                       }
                     }
+                    $assetname ="";
+                    $assettype = "";
+                    $donorid = "";
                   ?>
                   <!-- record to be modified -->
+                  
+                  
                   <tr class="modify">
                     <td><input type="number" placeholder="Enter assetcode" value="<?php echo $assetcode ?>" name="assetcode"></td>
                     <td><input type="text" placeholder="Enter assetname" value="<?php echo $assetname ?>" name="assetname"></td>

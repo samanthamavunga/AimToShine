@@ -54,7 +54,7 @@ session_start();
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">Aim To Shine</a></h1>
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      
 
       <!--nav-->
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -67,6 +67,7 @@ session_start();
       </nav><!-- end.navbar -->
 
       <a href="Registration.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Register</a>
+      <a href="loginselector.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
     </div>
   </header><!-- End Header -->
 
@@ -77,7 +78,7 @@ session_start();
       <section class="breadcrumbs">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center">
-            <h2>Mentee/Parent</h2>
+            <h2>Mentee/Mentor</h2>
             <ol>
               <li><a href="loginselector.php">Login</a></li>
               <li>Register</li>
@@ -89,9 +90,9 @@ session_start();
 
       <!--This message before the form-->
       <h2> Purpose</h2>
-      <p> Our program accepts children ages 5-15. They can be enrolled in our community-Based Mentoring Program<br>
-                <br> We encourage 100% participation from both parents/guardian and child.<br> This is a wonderful opportunity for a
-                child to have an additionalsupport system on one-to-ne or group basis
+      <p> Our program accepts children ages 5-15 and Mentors ages 18-40. They can be enrolled in our community-Based Mentoring Program<br>
+                <br> We encourage 100% participation from both parents/guardian, mentor and child.<br> This is a wonderful opportunity for a
+                child to have an additional support system on one-to-ne or group basis and mentor to help bring out the light from mentees
       </p>
 
       <!--This is for the inside page that contain the form--->
@@ -117,7 +118,7 @@ session_start();
                 $_SESSION["errors"] = null;
               ?>
               <p>
-                Already have an account? <a href="login.php">Sign in</a>
+                Already have an account? <a href="loginselector.php">Sign in</a>
               </p>
 
               <div class="form-control" style="color:#3498db">
@@ -237,7 +238,7 @@ session_start();
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Our mentorship</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Primary students gromming</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Primary students grooming</a></li>
             </ul>
           </div>
 

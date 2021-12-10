@@ -1,25 +1,32 @@
 <?php require("../Database_Connections/db_cred.php");
   session_start();
 
-  $personid=$_SESSION['person_id'];
+  $fname="";
+  $lname="";
+  if(isset($_POST['submit'])){
+    $personid=$_SESSION['person_id'];
+    
 
-  // Create connection
-  $conn = new mysqli(servername, username, password, dbname);
+    // Create connection
+    $conn = new mysqli(servername, username, password, dbname);
+  
 
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  } 
 
-  $sql = "SELECT * FROM `person` WHERE person_id='$personid'";
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    } 
+    
+    $sql = "SELECT * FROM `person` WHERE person_id='$personid'";
 
-  $results= $conn->query($sql);
-  $rows = $results->fetch_assoc();
+    $results= $conn->query($sql);
+    $rows = $results->fetch_assoc();
 
-  if($results->num_rows==1){
-    $fname =$rows['firstname'];
-    $lname = $rows['lastname'];
-  }   
+    if($results->num_rows==1){
+      $fname =$rows['firstname'];
+      $lname = $rows['lastname'];
+    } 
+  }  
 ?>
 
 <!doctype html>
@@ -46,13 +53,15 @@
                 <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
             </div>
             <div class="display-dashboard">
+              
               <h1>Welcome <?php echo 'Dear'.' '.$fname.' '.$lname?></h1>
             </div>
+
 
         </div>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>
+        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
     </footer>
       
     <!-- Optional JavaScript -->

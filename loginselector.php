@@ -55,21 +55,20 @@
       <div class="container d-flex align-items-center">
 
         <h1 class="logo me-auto"><a href="index.html">Aim To Shine</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+        
         <!--nav-->
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto" href="#mentorship">Our Mentorship</a></li>
-            <li><a class="nav-link scrollto" href="#donations">Contact Us</a></li>
+            <li><a class="nav-link scrollto" href="about.php">About</a></li>
+            <li><a class="nav-link scrollto" href="index.php #services">Our Mentorship</a></li>
+            <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
           </ul>
-          <!--<i class="bi bi-list mobile-nav-toggle"></i>-->
+          
         </nav><!-- .navbar -->
 
         <a href="Registration.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Register</a>
+        <a href="loginselector.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
       </div>
     </div>
     </header><!-- End Header -->
@@ -81,7 +80,7 @@
         <div class="container">
 
           <div class="d-flex justify-content-between align-items-center">
-            <h6><a href="login.php">Login</a>/Mentee</h6>
+            <h6><a href="loginselector.php">Login</a>/Mentee</h6>
             <ol>
               <li><a href="login.php">Login</a></li>
               <li>Admin</li>
@@ -113,6 +112,7 @@
 
               <div class="imgcontainer">
                 <img src="assets/img/avatar_for_login.png" alt="ui" class="avatar">
+                <p>Do not have any account?<a href="Registration.php">register here</a><p>
               </div>
               <div class="container2">
                 <label for="uname"><b>Username</b></label>

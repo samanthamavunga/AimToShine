@@ -47,15 +47,15 @@ $sql1 = "SELECT * FROM `donor`";
               <input type="submit" class="btn btn-outline-secondary addbutton" name="view" value="Refresh">
               <table class="table">
                 <thead>
-                  <tr style="margin-bottom:5px;">
+                  <!--<tr style="margin-bottom:5px;">-->
                     <th scope="col">DonorID</th>
                     <th scope="col">DonorName<th>
-                    <th scope="col">DonorEmail</th>
-                    <th scope="col">DonorAddress</th>
-                    <th scope="col">DonorProvince</th>
-                    <th scope="col">DateDonated</th>
-                    <th scope="col">DonationName</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" style="position:relative; right:160px;">DonorEmail</th>
+                    <th scope="col" style="position:relative; right:120px;">DonorAddress</th>
+                    <th scope="col"style="position:relative; right: 120px;">DonorProvince</th>
+                    <th scope="col" style="position:relative; right:120px;">DateDonated</th>
+                    <th scope="col" style="position:relative; right:120px;">DonationName</th>
+                    <th scope="col" style="position:relative; right:120px;">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -96,8 +96,8 @@ $sql1 = "SELECT * FROM `donor`";
                 <thead>
                   <tr>
                     <th scope="col">DonorID</th>
-                    <th scope="col">DonorName<th>
-                    <th scope="col">DonorEmail</th>
+                    <th scope="col" >DonorName<th>
+                    <th scope="col" style="position:relative; right:90px;">DonorEmail</th>
                     <th scope="col">DonorAddress</th>
                     <th scope="col">DonorProvince</th>
                     <th scope="col">DateDonated</th>
@@ -217,7 +217,6 @@ $sql1 = "SELECT * FROM `donor`";
           </form>
         </div>
       </div>
-    </section>
     </section>
     <footer style="clear:both;">
         <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>

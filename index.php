@@ -50,6 +50,7 @@
       </nav><!-- .navbar -->
 
       <a href="Registration.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Register</a>
+      <a href="loginselector.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
     </div>
   </header>
   <!-- End Header -->
@@ -71,7 +72,7 @@
     <!-- ======= Users section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
-        <h1>Click on Relevent Button to get involved</h1>
+        <h1>What We Believe</h1>
           <div class="row">
             <div class="col-lg-8 d-flex align-items-stretch">
               <div class="icon-boxes d-flex flex-column justify-content-center">
@@ -80,20 +81,20 @@
               <!--for donor-->
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <h4>Mentor/Volunteer</h4>
+                    <h4>Knowledge</h4>
                   </div>
                 </div>
 
                 <!--for mentee or parent-->
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <h4>Mentor/Parent</h4>
+                    <h4>Power</h4>
                   </div>
                 </div>
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <h4>Donor</h4>
+                    <h4>Intergrity</h4>
                   </div>
                 </div>
       
@@ -106,7 +107,7 @@
 
 
     <!-- ======= Our Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services.org" class="services">
       <div class="container">
 
         <div class="section-title">

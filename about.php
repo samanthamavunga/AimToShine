@@ -48,9 +48,7 @@
       <div class="container d-flex align-items-center">
 
         <h1 class="logo me-auto"><a href="index.html">Aim To Shine</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+        
         <!--nav-->
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
@@ -63,6 +61,7 @@
         </nav><!-- .navbar -->
 
         <a href="Registration.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Register</a>
+        <a href="loginselector.php" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</a>
       </div>
     </div>
     </header><!-- End Header -->

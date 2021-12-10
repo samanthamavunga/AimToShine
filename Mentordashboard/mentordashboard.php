@@ -38,19 +38,19 @@
     <section>
       <div class="dashboard">
             <div class="sidebar">
-                <span><img src="images/judge.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+                <span><img src="assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
                 <span><img src="images/court.png" alt="court-icon"/><a href="mentorship.php">Mentorship Program</a> </span>
                 <span><img src="images/lawyer.png" alt="lawyer-icon"/><a href="donation.php">View Donations</a> </span>
                 <span><img src="images/head.png" alt="culprit-icon"/><a href="assets.php">View Assets</a> </span>
                 <span style="margin-top:150px;"><img src="images/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
             </div>
             <div class="display-dashboard">
-              <h1>Welcome <?php echo 'Jugde'.' '.$fname.' '.$lname?></h1>
+              <h1>Welcome <?php echo 'Dear'.' '.$fname.' '.$lname?></h1>
             </div>
         </div>
     </section>
     <footer style="clear:both;">
-        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> Crime&Law &copy; 2021</p>
+        <p><img src="images/mace.png" alt="footer-image" class="footer-image"> AimToShine &copy; 2021</p>
     </footer>
       
     <!-- Optional JavaScript -->
