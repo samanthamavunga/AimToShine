@@ -31,12 +31,11 @@ $sql1 = "SELECT * FROM `mentorship_content`";
     <section>
     <div class="dashboard">
         <div class="sidebar">
-          <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
-          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
-          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
-          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
-        </div>
+        <span><img src="../assets/img/user.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/code-optimisation.png" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/donate.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/assets.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span> </div>
         <div class="display-dashboard">
           <form action="mentorship.php" method="post">
             <div class="container-fluid cdiv1" >

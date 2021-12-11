@@ -47,12 +47,11 @@
     <section>
       <div class="dashboard">
         <div class="sidebar">
-          <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
-          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
-          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
-          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
-        </div>
+          <span><img src="../assets/img/user.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/code-optimisation.png" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/donate.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/assets.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span></div>
         <div class="display-dashboard">
           <form action="" method=post>
             <h3 class="h3-profile">Profile</h3>
@@ -76,7 +75,7 @@
             </div>
             
             <h3 class="h3-profile">Edit Profile</h3>
-            <div class="container-fluid pdiv1 special-bottom-margin" style="height:400px;">
+            <div class="container-fluid pdiv1 special-bottom-margin" style="height:1000px;">
               <label style="margin-right:10px;">Firstname</label><input type="text" placeholder="Enter fname" value="<?php echo $fname?>" name="fname"><br>
               <label style="margin-right:10px;">Lastname</label><input type="text" placeholder="Enter lname" value="<?php echo $lname ?>" name="lname"><br>
               <label style="margin-right:10px;">Username</label><input type="text" placeholder="Enter username" value="<?php echo $username ?>" name="uname"><br>
@@ -88,7 +87,7 @@
               <label style="margin-right:10px;">New Password</label><input type="text" placeholder="Enter new password" value="<?php echo ""?>" name="newpass"><br>
               <input type="submit" name="edit" value="Edit" style="
                 width:100%;
-                background-color:white;
+                background-color:#8ec3f1;
                 border:none;
                 margin-top:10px;
                 border-radius:5px;

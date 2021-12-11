@@ -82,8 +82,8 @@
           <div class="d-flex justify-content-between align-items-center">
             <h6><a href="loginselector.php">Login</a>/Mentee</h6>
             <ol>
-              <li><a href="login.php">Login</a></li>
-              <li>Admin</li>
+              <li><a href="loginselector.php">Login</a></li>
+              <li>Mentor</li>
             </ol>
           </div>
         <h2 style="color: blue">NOTE: Parents can login/Register for their children</h2>

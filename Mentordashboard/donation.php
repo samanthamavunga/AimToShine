@@ -33,10 +33,10 @@
     <section>
     <div class="dashboard">
         <div class="sidebar">
-          <span><img src="../assets/img/profile.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
-          <span><img src="../assets/img/our_motto.jfif" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
-          <span><img src="../assets/img/our_values.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
-          <span><img src="../assets/img/images.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
+          <span><img src="../assets/img/user.png" alt="home-icon"/><a href="profile.php">Profile</a> </span>
+          <span><img src="../assets/img/code-optimisation.png" alt="program-icon"/><a href="mentorship.php">Programs</a> </span>
+          <span><img src="../assets/img/donate.png" alt="donor-icon"/><a href="donation.php">View Donations</a> </span>
+          <span><img src="../assets/img/assets.png" alt="assets-icon"/><a href="assets.php">View Assets</a> </span>
           <span style="margin-top:150px;"><img src="../assets/img/logout.png" alt="logout-icon"/><a href="../loginselector.php">Logout</a> </span>
         </div>
         <div class="display-dashboard">
@@ -47,15 +47,15 @@
               <input type="submit" class="btn btn-outline-secondary addbutton" name="view" value="Refresh">
               <table class="table">
                 <thead>
-                  <!--<tr style="margin-bottom:5px;">-->
-                    <th scope="col">DonorID</th>
-                    <th scope="col">DonorName<th>
-                    <th scope="col" style="position:relative; right:160px;">DonorEmail</th>
-                    <th scope="col" style="position:relative; right:120px;">DonorAddress</th>
-                    <th scope="col"style="position:relative; right: 120px;">DonorProvince</th>
-                    <th scope="col" style="position:relative; right:120px;">DateDonated</th>
-                    <th scope="col" style="position:relative; right:120px;">DonationName</th>
-                    <th scope="col" style="position:relative; right:120px;">Action</th>
+                  <tr>
+                    <th scope="col" style="position:relative; ">DonorID</th>
+                    <th scope="col" style="position:relative; ">DonorName<th>
+                    <th scope="col" style="position:relative; left:-190px">DonorEmail</th>
+                    <th scope="col" style="position:relative; left:-150px">DonorAddress</th>
+                    <th scope="col" style="position:relative; left:-130px">DonorProvince</th>
+                    <th scope="col" style="position:relative; left:-130px">DateDonated</th>
+                    <th scope="col" style="position:relative; left:-130px">DonationName</th>
+                    <th scope="col" style="position:relative; left:-130px">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -91,72 +91,45 @@
               </table>
             </div>
             <div class="container-fluid cdiv1 special-bottom-margin" >
-              <h3>Add or Edit Donations</h3>
+              <h3 class='coloring'>Add or Edit Donations</h3>
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">DonorID</th>
-                    <th scope="col">DonorName<th>
-                    <th scope="col" style="position:relative; left:-300px;">DonorEmail</th>
-                    <th scope="col" style="position:relative; left:-400px;">DonorAddress</th>
-                    <th scope="col"style="position:relative; left: -450px;">DonorProvince</th>
-                    <th scope="col" style="position:relative; left:-490px;">DateDonated</th>
-                    <th scope="col" style="position:relative; left:-550px;">DonationName</th>
-                    <th scope="col" style="position:relative; left:-530px;">Action</th>
+                    <th scope="col" style="position:relative; ">DonorID</th>
+                    <th scope="col" style="position:relative; ">DonorName<th>
+                    <th scope="col" style="position:relative; left:-110px">DonorEmail</th>
+                    <th scope="col" style="position:relative; left:-150px">DonorAddress</th>
+                    <th scope="col" style="position:relative; left:-150px">DonorProvince</th>
+                    <th scope="col" style="position:relative; left:-150px">DateDonated</th>
+                    <th scope="col" style="position:relative; left:-150px">DonationName</th>
+                    <th scope="col" style="position:relative; left:-140px">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                    //updating table record.
 
                     //checking if edit button has been clicked.
                     if(isset($_GET['editID'])){
-                      echo "successful";
-
                       $id=$_GET['editID'];
 
-                      $sql = "SELECT * FROM `donor`";
-                      
-                     // $results= db_query($sql);
-                     // $rows = $results->db_fetch();
-
-                      $rows = getDonors();
-
-
-                      foreach($rows as $row){
-                        if ($row['donor_id'] == $_GET['editID']){
-                        echo "unsuccessful";
-
-                        $donorid = $row['donor_id'];
-                        $donorname =$row['donor_name'];
-                        $donoremail = $row['donor_email'];
-                        $donoraddress = $row['donor_adress'];
-                        $donorprovince = $row['donor_province'];
-                        $datedonated = $row['date_donated'];
-                        $donationname = $row['donation_name'];
-                     }}
-
-                      // else{
-                      //   echo "failed";
-
-                      // }
-
-
-
+                      $sql = "SELECT * FROM `donor` WHERE donor_id=$id";
+                        
+                      $results= $conn->query($sql);
+                      $rows = $results->fetch_assoc();
+                      $donorid = $rows['donor_id'];
+                      $donorname =$rows['donor_name'];
+                      $donoremail = $rows['donor_email'];
+                      $donoraddress = $rows['donor_adress'];
+                      $donorprovince = $rows['donor_province'];
+                      $datedonated = $rows['date_donated'];
+                      $donationname = $rows['donation_name'];
                     }
-
-                    else{
-
-                    echo "passed";
-                    }
-
                   ?>
                   <!-- record to be modified -->
-                  <tr class="modify" style="position:relative; left: -125px; padding:10px" >
-
-                    <td style="visibility:hidden"><input type="number" placeholder="Enter donor-id" value="<?php echo $donorid ?>" name="donorid"></td>
+                  <tr class="modify">
+                    <td style="visibility:hidden;"><input type="number" placeholder="Enter donor-id" value="<?php echo $donorid ?>" name="donorid"></td>
                     <td><input type="text" placeholder="Enter donor name" value="<?php echo $donorname ?>" name="donorname"></td>
-                    <td><input type="text" style="padding:1px 0px -10px -10px" placeholder="Enter donor email" value="<?php echo $donoremail?>" name="donoremail"></td>
+                    <td><input type="text" placeholder="Enter donor email" value="<?php echo $donoremail?>" name="donoremail"></td>
                     <td><input type="text" placeholder="Enter donor address" value="<?php echo $donoraddress ?>" name="donoraddress"></td>
                     <td><input type="text" placeholder="Enter donor province" value="<?php echo $donorprovince ?>" name="donorprovince"></td>
                     <td><input type="date" placeholder="Enter date donated" value="<?php echo $datedonated ?>" name="datedonated"></td>
@@ -183,24 +156,24 @@
                             </td>
                           ";
                         }
-                    ?>
+                      ?>
                   </tr>
                   <small style="margin-left:80px;">
                       <?php
                         //adding record to table.
                         if(isset($_POST['addrecord'])){
-                          $donorid = $rows['donorid'];
-                          $donorname =$rows['donorname'];
-                          $donoremail = $rows['donoremail'];
-                          $donoraddress = $rows['donoraddress'];
-                          $donorprovince = $rows['donorprovince'];
-                          $datedonated = $rows['datedonated'];
-                          $donationname = $rows['donationname'];
+                          $donorid = $_POST['donorid'];
+                          $donorname =$_POST['donorname'];
+                          $donoremail = $_POST['donoremail'];
+                          $donoraddress = $_POST['donoraddress'];
+                          $donorprovince = $_POST['donorprovince'];
+                          $datedonated = $_POST['datedonated'];
+                          $donationname = $_POST['donationname'];
 
                           
                           //query 03 - add
-                          $sql3 = "INSERT INTO `donor`(`donor_id`, `donor_name`, `donor_email`, `donor_adress`, `donor_province`, `date_donated`, `donation_name`) 
-                          VALUES ('$donorid','$donorname','$donoremail','$donoraddress','$donorprovince','$datedonated','$donationname')";
+                          $sql3 = "INSERT INTO `donor`(`donor_name`, `donor_email`, `donor_adress`, `donor_province`, `date_donated`, `donation_name`) 
+                          VALUES ('$donorname','$donoremail','$donoraddress','$donorprovince','$datedonated','$donationname')";
                           echo $sql3;
 
                           if (mysqli_query($conn, $sql3)) {
@@ -212,18 +185,18 @@
 
                         //updating record
                         if(isset($_POST['updaterecord'])){
-                          $donorid = $rows['donorid'];
-                          $donorname =$rows['donorname'];
-                          $donoremail = $rows['donoremail'];
-                          $donoraddress = $rows['donoraddress'];
-                          $donorprovince = $rows['donorprovince'];
-                          $datedonated = $rows['datedonated'];
-                          $donationname = $rows['donationname'];
+                          $donorid = $_POST['donorid'];
+                          $donorname =$_POST['donorname'];
+                          $donoremail = $_POST['donoremail'];
+                          $donoraddress = $_POST['donoraddress'];
+                          $donorprovince = $_POST['donorprovince'];
+                          $datedonated = $_POST['datedonated'];
+                          $donationname = $_POST['donationname'];
 
                           
                           //query 02 - update
                           $sql2 = "UPDATE `donor` 
-                          SET `donor_id`='$donorid',`donor_name`='$donorname',`donor_email`='$donoremail',`donor_adress`='$donoraddress',`donor_province`='$donorprovince',`date_donated`='$datedonated',`donation_name`='$donationname' 
+                          SET `donor_name`='$donorname',`donor_email`='$donoremail',`donor_adress`='$donoraddress',`donor_province`='$donorprovince',`date_donated`='$datedonated',`donation_name`='$donationname' 
                           WHERE donor_id='$donorid'"; 
 
                           if ($conn->query($sql2) === TRUE) {
